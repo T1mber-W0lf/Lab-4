@@ -13,7 +13,7 @@ https://github.com/T1mber-W0lf/Lab-4/blob/main/GPS_Web.html
 
 3.Підключення JavaScript: У кінці сторінки підключається файл app.js, який містить логіку обробки та візуалізації даних.
 
-
+https://github.com/T1mber-W0lf/Lab-4/blob/main/app.js
 
 WebSocket підключення: Створюється WebSocket-з'єднання з сервером за адресою ws://localhost:4001. Через це з'єднання отримуються дані про позиції об'єкта та супутників у реальному часі.
 
