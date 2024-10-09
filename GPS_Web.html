@@ -1,14 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPS Object and Satellites Position</title>
+    <title>GPS and Satellites Visualization</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .control-panel {
+            margin-bottom: 20px;
+        }
+        .control-panel label {
+            display: block;
+            margin: 5px 0 2px;
+        }
+        .control-panel input {
+            width: 200px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .control-panel button {
+            padding: 10px 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>GPS Object and Satellites Position</h1>
-    <div id="graphDiv" style="width:100%;height:100%;"></div>
-    <script src="app.js"></script>
+    <h1>GPS Visualization</h1>
+    
+    <div class="control-panel">
+        <h2>Налаштування GPS</h2>
+        
+        <label for="emulationZoneSize">Розмір зони емуляції (км):</label>
+        <input type="number" id="emulationZoneSize" value="200">
+        
+        <label for="messageFrequency">Частота передачі повідомлень (повідомлень/сек):</label>
+        <input type="number" id="messageFrequency" value="1">
+        
+        <label for="satelliteSpeed">Швидкість руху супутників (км/год):</label>
+        <input type="number" id="satelliteSpeed" value="100">
+        
+        <label for="objectSpeed">Швидкість руху об'єкта (км/год):</label>
+        <input type="number" id="objectSpeed" value="10">
+        
+        <button id="updateParams">Оновити Параметри</button>
+    </div>
+    
+    <div id="graphDiv"></div>
+    
+    <script src="app.js"></script> <!-- Підключення JS-файлу -->
 </body>
 </html>
